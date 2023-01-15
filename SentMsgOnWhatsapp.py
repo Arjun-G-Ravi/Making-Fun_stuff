@@ -51,6 +51,6 @@ def myCommand():
     
 x = myCommand()
 print("\n\n\n",x)
-pk.sendwhatmsg(number,x,datetime.datetime.now().hour,datetime.datetime.now().minute + 2,15,True,5
+pk.sendwhatmsg(number,x,datetime.datetime.now().hour,datetime.datetime.now().minute + 1,15,True,5
                
                )

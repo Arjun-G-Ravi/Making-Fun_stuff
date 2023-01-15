@@ -35,7 +35,7 @@ def myCommand():
         r.pause_thresholdld =  1 
         audio = r.listen(source) 
         
-    try: 
+    try:  
         query = r.recognize_google(audio, language='en-in') #result2 is being printed
         return query 
     
