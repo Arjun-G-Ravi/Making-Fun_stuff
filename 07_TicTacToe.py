@@ -19,19 +19,20 @@ def check_win():
             if num in X:
                 flagX += 1
         if flagX == 3:
-            print("X won the game")
+            print("\n\n--------GAME OVER--------")
+            print("You won the game")
             game = 'Over'
             break
 
         for num in win_trio:
             if num in O:
                 flagO += 1
-        if flagX == 3:
-            print("O won the game")
+        if flagO == 3:
+            print("\n\n--------GAME OVER--------")
+            print("The computer won the game")
             game = 'Over'
             break
 
-    
 
 def show_board():
     for i in [0,3,6]:
@@ -69,7 +70,7 @@ while True:
         computer_plays()
     except Exception:
         show_board()
-        print("--------GAME OVER--------")
+        print("\n\n--------GAME OVER--------")
         print("It is a draw.")
         game = 'Over'
         
@@ -81,4 +82,5 @@ while True:
     show_board()
     # print("Game=",game)
     # print(X,O)
+print()
 show_board()
