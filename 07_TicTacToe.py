@@ -3,7 +3,7 @@ import random
 def update_board(n,symbol):
     l[n-1] = symbol
     list_of_remaining_nos.remove(n)  
-    print(l)
+    # print(l)
     return None
 
 def check_win():
@@ -11,7 +11,7 @@ def check_win():
 
 def show_board():
     for i in [0,3,6]:
-        print(f'|{l[i]}|{l[i+1]}|{l[i+2]}|')
+        print(f'    |{l[i]}|{l[i+1]}|{l[i+2]}|')
     return None
 
 def computer_plays():
@@ -26,11 +26,22 @@ print('''This shows the number's location:-
     | 4 | 5 | 6 |
     | 7 | 8 | 9 |\n''')
 
-for i in range(5):
-    num = int(input("Enter a number: "))
-    update_board(num,'X')
+while True:
+    num = int(input("\nEnter a number: "))
+    try:
+        update_board(num,'X')
+    except Exception:
+        print("Invalid move. Try again\n")
+        continue
     check_win()
-    computer_plays()
+    try:
+        computer_plays()
+    except Exception:
+        show_board()
+        print("--------GAME OVER--------")
+        print("It is a draw.")
+        break
     check_win()
-    print(list_of_remaining_nos)
+    
+    # print(list_of_remaining_nos)
     show_board()
