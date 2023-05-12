@@ -1,3 +1,9 @@
+'''
+BUG
+Typing wrong char, updates over existing ones.
+
+'''
+
 import random
 
 def update_board(n,symbol):
