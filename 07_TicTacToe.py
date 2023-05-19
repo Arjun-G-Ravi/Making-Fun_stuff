@@ -19,8 +19,11 @@ def check_win():
             if num in X:
                 flagX += 1
         if flagX == 3:
-            print("\n\n--------GAME OVER--------")
-            print("You won the game")
+            print("\n\n---------GAME OVER---------")
+            print("---------------------------")
+            print("-----You won the game -----")
+            print("---------------------------")
+            print("---------------------------")
             game = 'Over'
             break
 
@@ -28,8 +31,11 @@ def check_win():
             if num in O:
                 flagO += 1
         if flagO == 3:
-            print("\n\n--------GAME OVER--------")
-            print("The computer won the game")
+            print("\n\n---------GAME OVER---------")
+            print("---------------------------")
+            print("-The computer won the game-")
+            print("---------------------------")
+            print("---------------------------")
             game = 'Over'
             break
 
