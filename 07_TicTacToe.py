@@ -1,24 +1,18 @@
-'''
-BUG
-Typing wrong char, updates over existing ones.
-
-'''
-
 import random
 
 def update_board(n,symbol):
-    l[n-1] = symbol
     list_of_remaining_nos.remove(n)  
+    l[n-1] = symbol
     # print(l)
     return None
 
 def check_win():
     global game
-
     win1 = [[3*i+1,3*i+1+1,3*i+2+1] for i in range(0,3)]
     win2 = [[i+1,i+3+1,i+6+1] for i in range(0,3)]
     win3 = [[1,5,9],[3,5,7]]
-    win_list = win1+win2+win3
+    win_list = win1+win2+win3 # All possible win conditions
+
     for win_trio in win_list:
         flagX,flagO=0,0
         for num in win_trio:
